@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morse Code Translator</title>
+</head>
+<body>
+    <div class="Heading" style="text-align: center">
+        <h1><a href="{{url_for('homepage')}}" style="text-decoration:none;color:black">Morse Code Translator</a></h1>
+        <p>Welcome, please select your preferred mode of translation</p>
+    </div>
+    <div style="text-align: center">
+        <form method="post" action="{{ url_for('homepage') }}">
+            <button type="submit" name="submit_btn" value="1">Convert Text to Morse</button>
+            <button type="submit" name="submit_btn" value="0">Convert Morse to Text</button>
+        </form>
+    </div>
+
+</body>
+</html>

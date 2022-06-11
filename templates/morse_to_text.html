@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morse Code Translator</title>
+</head>
+<body>
+    <div class="Heading" style="text-align: center;">
+        <h1><a href="{{url_for('homepage')}}" style="text-decoration:none;color:black">Morse Code Translator</a></h1>
+    </div>
+    <div style="text-align: center">
+        <form method="post" action="{{ url_for('morse_to_text') }}">
+            <textarea rows="10" cols="150" name="code" placeholder= 'Enter the morse that you would like to see in text. Use | or / for spaces. Special characters are not allowed.'
+            ></textarea>
+            <button type="submit">Convert</button>
+        </form>
+        <div class="output">
+            {% if data: %}
+            <p>Output: {{ data }}</p>
+            {%endif %}
+        </div>
+    </div>
+</body>
+</html>

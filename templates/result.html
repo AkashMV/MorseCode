@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morse Code Translator</title>
+</head>
+<body>
+    <div class="Heading" style="text-align: center">
+        {{ if data['method']== 1: }}
+        <h1>Morse Code Translator</h1>
+        <p>Here is your morse code: </p>
+        <p>{{ data['output'] }}</p>
+        {{ elif data['method'] == 0: }}
+        <h1>Morse Code Translator</h1>
+        <p>Here is your text: </p>
+        <p>{{ data['output'] }}</p>
+        {{ endif }}
+    </div>
+</body>
+</html>
